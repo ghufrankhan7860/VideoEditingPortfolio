@@ -1,0 +1,51 @@
+@keyframes zoomIn{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }   
+}
+@keyframes zoomOut{
+    from{
+        transform: scale(1.1);
+    }
+    to{
+        transform: scale(1);
+    }   
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeInAnimation ease-in 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.zoom-in{
+    animation: zoomOut 0.8s forwards;
+    transition: transform 0.15s ease-in;
+}
+
+.zoom-in:hover{
+    animation: zoomIn 0.8s forwards;
+    transition: transform 0.2s ease-out;
+}
+
+.btn{
+    animation: zoomOut 0.3s forwards;
+    transition: transform 0.09s ease-in;
+}
+
+.btn:hover{
+    animation: zoomIn 0.3s forwards;
+    transition: transform 0.09s ease-out;
+}
